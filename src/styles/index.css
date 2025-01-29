@@ -1,0 +1,101 @@
+/* AllListsView.css */
+
+/* Set the height of the entire page */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root {
+    height: 100%;
+  }
+
+  .heading{
+    text-align: center;
+    font-size: 25px;
+  }
+  
+  /* Wrapper for the lists */
+  .list-container-wrapper {
+    gap: 20px;
+    height: calc(100% - 40px); /* Adjust for padding */
+    overflow-y: auto; /* Add vertical scroll */
+    padding: 20px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+  .new-list-btn, .update-list-btn, .cancel-list-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.new-list-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.update-list-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-list-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+  .list-column-wrapper{
+    display: flex;
+    height: 80%;
+  }
+  
+  /* Style for individual list containers */
+  .list-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    flex: 1;
+    background: #fff;
+    max-width: 500px; /* Optional: Limit the width of each list */
+  }
+  
+  /* Column for List 1 and List 2 */
+  .list-column {
+    margin-left: 20px; /* Move the list to the right */
+    overflow-y: scroll;
+    background: #e8f4f8;
+    padding: 10px;
+  }
+  
+  /* Header styles */
+  h2, h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  /* Paragraph text */
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+
+  @media (max-width: 768px) {
+    .list-container-wrapper {
+      flex-direction: column; /* Stack lists vertically on smaller screens */
+      gap: 10px;
+    }
+  
+    .list-column {
+      margin-left: 0; /* Remove the margin on small screens */
+    }
+  }
+  
