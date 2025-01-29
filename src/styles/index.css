@@ -1,101 +1,160 @@
-/* AllListsView.css */
-
-/* Set the height of the entire page */
+/* Set the height for the entire page */
 html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  #root {
-    height: 100%;
-  }
-
-  .heading{
-    text-align: center;
-    font-size: 25px;
-  }
-  
-  /* Wrapper for the lists */
-  .list-container-wrapper {
-    gap: 20px;
-    height: calc(100% - 40px); /* Adjust for padding */
-    overflow-y: auto; /* Add vertical scroll */
-    padding: 20px;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: center; /* Center buttons */
-    gap: 15px; /* Space between buttons */
-    margin-top: 20px;
+  height: 100%;
+  margin: 0;
 }
 
-  .new-list-btn, .update-list-btn, .cancel-list-btn {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
+/* Ensure the root element also takes full height */
+#root {
+  height: 100%;
 }
 
+/* Style for heading text */
+.heading {
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Container for checkboxes and labels */
+.checkbox-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the checkbox and label */
+}
+
+/* Style for checkbox input */
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer; /* Show pointer when hovering over the checkbox */
+}
+
+/* Validation message style */
+.validation-message {
+  color: #dc3545;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style for the new list container */
+.new-list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Style for individual items within the new list */
+.new-list-item {
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Wrapper for both lists */
+.list-container-wrapper {
+  gap: 20px;
+  height: calc(100% - 40px); /* Adjust for padding */
+  overflow-y: auto; /* Add vertical scrolling */
+  padding: 20px;
+}
+
+/* Style for button container */
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center the button and validation message */
+  gap: 10px; /* Space between button and validation message */
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.button-container-2{
+  display: flex;
+  justify-content: center; /* Center buttons */
+  gap: 15px; /* Space between buttons */
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.new-list-btn, .update-list-btn, .cancel-list-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+/* New list button style */
 .new-list-btn {
   background-color: #007bff;
   color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: auto; /* Prevent button from stretching to full width */
 }
 
+/* Update list button style */
 .update-list-btn {
   background-color: #28a745;
   color: white;
 }
 
+/* Cancel list button style */
 .cancel-list-btn {
   background-color: #dc3545;
   color: white;
 }
 
-  .list-column-wrapper{
-    display: flex;
-    height: 80%;
-  }
-  
-  /* Style for individual list containers */
-  .list-container {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 15px;
-    flex: 1;
-    background: #fff;
-    max-width: 500px; /* Optional: Limit the width of each list */
-  }
-  
-  /* Column for List 1 and List 2 */
-  .list-column {
-    margin-left: 20px; /* Move the list to the right */
-    overflow-y: scroll;
-    background: #e8f4f8;
-    padding: 10px;
-  }
-  
-  /* Header styles */
-  h2, h3 {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  /* Paragraph text */
-  p {
-    font-size: 14px;
-    color: #666;
+/* Wrapper for list columns */
+.list-column-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+/* Style for individual list containers */
+.list-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+  flex: 1;
+  background: #fff;
+  max-width: 500px; /* Limit the width of each list */
+}
+
+/* Style for columns containing lists */
+.list-column {
+  margin-left: 20px; /* Space between lists */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  background: #e8f4f8;
+  padding: 10px;
+}
+
+/* Header styles */
+h2, h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Paragraph text styles */
+p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .list-container-wrapper {
+    flex-direction: column; /* Stack lists vertically on smaller screens */
+    gap: 10px;
   }
 
-  @media (max-width: 768px) {
-    .list-container-wrapper {
-      flex-direction: column; /* Stack lists vertically on smaller screens */
-      gap: 10px;
-    }
-  
-    .list-column {
-      margin-left: 0; /* Remove the margin on small screens */
-    }
+  .list-column {
+    margin-left: 0; /* Remove margin for stacked layout */
   }
-  
+}
