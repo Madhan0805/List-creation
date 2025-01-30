@@ -2,6 +2,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Ensure the root element also takes full height */
@@ -20,13 +21,13 @@ html, body {
   margin-top: 10px;
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between the checkbox and label */
+  gap: 8px;
 }
 
 /* Style for checkbox input */
 .checkbox-container input[type="checkbox"] {
   margin-right: 5px;
-  cursor: pointer; /* Show pointer when hovering over the checkbox */
+  cursor: pointer;
 }
 
 /* Validation message style */
@@ -55,25 +56,25 @@ html, body {
 /* Wrapper for both lists */
 .list-container-wrapper {
   gap: 20px;
-  height: calc(100% - 40px); /* Adjust for padding */
-  overflow-y: auto; /* Add vertical scrolling */
+  height: calc(100% - 40px);
+  overflow-y: auto;
   padding: 20px;
 }
 
 /* Style for button container */
 .button-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center the button and validation message */
-  gap: 10px; /* Space between button and validation message */
+  flex-direction: column; 
+  align-items: center;
+  gap: 10px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
 .button-container-2{
   display: flex;
-  justify-content: center; /* Center buttons */
-  gap: 15px; /* Space between buttons */
+  justify-content: center; 
+  gap: 15px;
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -96,7 +97,7 @@ html, body {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  width: auto; /* Prevent button from stretching to full width */
+  width: auto;
 }
 
 /* Update list button style */
@@ -124,13 +125,13 @@ html, body {
   margin-bottom: 15px;
   flex: 1;
   background: #fff;
-  max-width: 500px; /* Limit the width of each list */
+  max-width: 500px;
 }
 
 /* Style for columns containing lists */
 .list-column {
-  margin-left: 20px; /* Space between lists */
-  overflow-y: scroll; /* Enable vertical scrolling */
+  margin-left: 20px;
+  overflow-y: scroll;
   background: #e8f4f8;
   padding: 10px;
 }
@@ -150,11 +151,55 @@ p {
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .list-container-wrapper {
-    flex-direction: column; /* Stack lists vertically on smaller screens */
+    flex-direction: column;
     gap: 10px;
   }
 
   .list-column {
-    margin-left: 0; /* Remove margin for stacked layout */
+    margin-left: 0;
   }
+}
+
+/* Styles for the failure view */
+.failure-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Styles for the failure message text */
+.failure-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styles for the retry button */
+.retry-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styles for the loading view */
+.loading-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Styles for the loading message text */
+.loading-text {
+  font-size: 24px;
+  font-weight: bold;
 }
